@@ -34,11 +34,11 @@ public class Carro {
     @OneToMany(mappedBy = "carro")
     private Set<OrdemServico> ordemServicos;
     @ManyToOne
-    @JoinColumn(name = "proprietario_id")
+    @JoinColumn(name = "clienteId")
     @NotNull(message = "O proprietário não pode ser nulo")
     private Cliente cliente;
     @ManyToOne
-    @JoinColumn(name = "oficina_id")
+    @JoinColumn(name = "oficinaId")
     @NotNull(message = "A oficina não pode ser nula")
     private Oficina oficina;
     // Getters e Setters

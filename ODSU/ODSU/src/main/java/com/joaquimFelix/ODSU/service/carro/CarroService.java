@@ -9,7 +9,7 @@ public interface CarroService {
 
     Carro obterCarroPorId(Long id);
 
-    Carro cadastrarCarro(Carro carro);
+    Carro cadastrarCarro(Carro carro,Long oficinaId,Long clienteId);
 
     Carro atualizarCarro(Long id, Carro carro);
 

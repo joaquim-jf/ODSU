@@ -1,7 +1,9 @@
 package com.joaquimFelix.ODSU.service.servico;
 
+import com.joaquimFelix.ODSU.model.entity.carro.Carro;
 import com.joaquimFelix.ODSU.model.entity.servico.OrdemServico;
 import com.joaquimFelix.ODSU.repository.servico.OrdemServicoRepository;
+import com.joaquimFelix.ODSU.service.carro.CarroService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,10 +14,11 @@ import java.util.Optional;
 public class OrdemServicoServiceImpl implements OrdemServicoService {
 
     private final OrdemServicoRepository ordemServicoRepository;
-
+    private final CarroService carroService;
     @Autowired
-    public OrdemServicoServiceImpl(OrdemServicoRepository ordemServicoRepository) {
+    public OrdemServicoServiceImpl(OrdemServicoRepository ordemServicoRepository, CarroService carroService) {
         this.ordemServicoRepository = ordemServicoRepository;
+        this.carroService = carroService;
     }
 
     @Override
@@ -29,7 +32,8 @@ public class OrdemServicoServiceImpl implements OrdemServicoService {
     }
 
     @Override
-    public OrdemServico cadastrarOrdemServico(OrdemServico ordemServico) {
+    public OrdemServico cadastrarOrdemServico(OrdemServico ordemServico, Long carroId) {
+        Carro carro = carroService.obterCarroPorId(carroId);
         return ordemServicoRepository.save(ordemServico);
     }
 

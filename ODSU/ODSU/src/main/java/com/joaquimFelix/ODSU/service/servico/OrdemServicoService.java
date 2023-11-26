@@ -7,7 +7,8 @@ import java.util.List;
 public interface OrdemServicoService {
     OrdemServico obterOrdemServicoPorId(Long id);
 
-    OrdemServico cadastrarOrdemServico(OrdemServico ordemServico);
+
+    OrdemServico cadastrarOrdemServico(OrdemServico ordemServico, Long carroId);
 
     OrdemServico atualizarOrdemServico(Long id, OrdemServico ordemServico);
 

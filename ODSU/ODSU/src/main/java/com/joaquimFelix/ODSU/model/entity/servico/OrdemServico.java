@@ -30,11 +30,14 @@ public class OrdemServico {
     @NotNull
     @Column(length = 1000)
     private String descricao;
-    @NotNull
-    @Temporal(TemporalType.TIMESTAMP)
+
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Temporal(TemporalType.DATE)
     private Date dataDeChegada;
+
     @ManyToOne
-    @JoinColumn(name = "carro_id")
+    @NotNull
+    @JoinColumn(name = "carroId")
     private Carro carro;
     // Getters e Setters
 

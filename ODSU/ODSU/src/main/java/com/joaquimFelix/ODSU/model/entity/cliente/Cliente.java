@@ -22,12 +22,10 @@ public class Cliente {
     @NotNull
     private String endereco;
     private String email;
-    @NotNull
     @OneToMany(mappedBy = "cliente")
     private Set<Carro> carros;
-    @NotNull
     @ManyToOne
-    @JoinColumn(name = "oficina_id")
+    @JoinColumn(name = "oficinaId")
     private Oficina oficina;
     // Getters e Setters
     public long getId() {

@@ -5,7 +5,7 @@ import com.joaquimFelix.ODSU.model.entity.Oficina;
 import java.util.List;
 
 public interface OficinaService {
-    Oficina obterOficinaPorId(Long id);
+    Oficina obterOficinaPorId(Long oficinaId);
 
     Oficina cadastrarOficina(Oficina oficina);
 
