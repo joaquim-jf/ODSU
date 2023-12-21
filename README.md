@@ -25,7 +25,7 @@ O ODSU (Sistema de Ordem de Serviço Automotivo) é uma aplicação APIRest dese
    - Execute o aplicativo Spring Boot.
 
 4. **Acesso à Aplicação**:
-   - Acesse a aplicação pelo navegador usando o Postman ou alguma aplicação parecida.
+   - Acesse a aplicação pelo navegador usando o swagger.
 
 ## Contribuições
 
